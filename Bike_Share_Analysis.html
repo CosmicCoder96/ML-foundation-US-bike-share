@@ -12932,9 +12932,15 @@ DQaH5pt7HpKkbu55SJK6GR6SpG6GhySpm+EhSepmeEiSuv1/jSj6fzyMffQAAAAASUVORK5CYII=
 <p>If you followed the use of the <code>.hist()</code> and <code>.show()</code> functions exactly like in the example, you're probably looking at a plot that's completely unexpected. The plot consists of one extremely tall bar on the left, maybe a very short second bar, and a whole lot of empty space in the center and right. Take a look at the duration values on the x-axis. This suggests that there are some highly infrequent outliers in the data. Instead of reprocessing the data, you will use additional parameters with the <code>.hist()</code> function to limit the range of data that is plotted. Documentation for the function can be found <a href="https://matplotlib.org/devdocs/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist">[here]</a>.</p>
 <p><strong>Question 5</strong>: Use the parameters of the <code>.hist()</code> function to plot the distribution of trip times for the Subscribers in your selected city. Do the same thing for only the Customers. Add limits to the plots so that only trips of duration less than 75 minutes are plotted. As a bonus, set the plots up so that bars are in five-minute wide intervals. For each group, where is the peak of each distribution? How would you describe the shape of each distribution?</p>
 <p><strong>Answer</strong>: For <strong>Subscribers:</strong></p>
-<p>The peak lies between the 5-10 min average trip duration. The shape comprises of a peak, and then goes on to decline. The initial value is not too low, and hence doesn't show any symmetry.</p>
-<p>For <strong>Customers:</strong></p>
-<p>The peak lies between the 20-25 min average duration. The shape is more symmetrical and closer to a bell curve.</p>
+<p>The peak lies between the 5-10 min average trip duration. 
+The histogram shows that there is a unique mode and hence it is <strong>unimodal</strong>
+The histogram has a long right tail and hence is a <strong>right or positively skewed</strong>  histogram.
+Since the distribution is skewed to the right, mean will lie to the right of the median.</p>
+<p>For <strong>Customers:</strong>
+The histogram shows that there is a unique mode and hence it is <strong>unimodal</strong>
+The histogram has a slightly longer right tail and hence is a <strong>right or positively skewed</strong> histogram.
+Though the left tail is fatter in comparison to Subscribers, and hence even though the curve is assyemetric it substantially cancels out the weights of the right hand side, and thus is less right skewed than subscribers.</p>
+<p>The peak lies between the 20-25 min average duration.</p>
 
 </div>
 </div>
@@ -14115,7 +14121,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[179]:</div>
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">subprocess</span> <span class="k">import</span> <span class="n">call</span>
@@ -14131,7 +14137,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[179]:</div>
+<div class="prompt output_prompt">Out[187]:</div>
 
 
 
@@ -14156,6 +14162,7 @@ PDF (.pdf). You may need additional packages or software to perform these export
 <li><a href="https://stackoverflow.com/questions/3100985/plot-with-custom-text-for-x-axis-points">Matplotlib: choosing custom axis-points for x-axis</a></li>
 <li><a href="https://stackoverflow.com/questions/6986986/bin-size-in-matplotlib-histogram">Matplotlib: defining bins for plot</a></li>
 <li><a href="https://www.tutorialspoint.com/python/time_strptime.htm">Python3: strptime() Reference</a></li>
+<li>[Skewed</li>
 <li>All the references recommended in the comments may have been used</li>
 </ul>
 
